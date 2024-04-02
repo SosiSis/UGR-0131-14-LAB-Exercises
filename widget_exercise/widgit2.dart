@@ -17,10 +17,46 @@ class LABB extends StatelessWidget {
           Text('verify your quantity and click checkout')
         ])
       ])),
-      Row(),
-      Row(),
+      Row(children: [
+        Row(children: [
+          Image.asset('assets/pic1.jpg'),
+          Column(children: [Text('Calas'), Text('15.00')])
+        ]),
+        Column(children: [
+          Icon(
+            Icons.favorite,
+            color: Colors.black,
+            size: 40,
+          ),
+          Text('16'),
+          Icon(
+            Icons.favorite,
+            color: Colors.black,
+            size: 40,
+          )
+        ])
+      ]),
+      Row(children: [
+        Row(children: [
+          Image.asset('assets/pic1.jpg'),
+          Column(children: [Text('Calas'), Text('15.00')])
+        ]),
+        Column(children: [
+          Icon(
+            Icons.favorite,
+            color: Colors.black,
+            size: 40,
+          ),
+          Text('16'),
+          Icon(
+            Icons.favorite,
+            color: Colors.black,
+            size: 40,
+          )
+        ])
+      ]),
       Container(),
-      Row()
+      Container(children: [Row(), Row(), Container()])
     ]);
   }
 }
