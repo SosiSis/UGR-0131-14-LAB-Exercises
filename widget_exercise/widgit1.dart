@@ -85,6 +85,55 @@ class LABA extends StatelessWidget {
           ],
         )
       ]),
+      Column(children: [
+        Row(children: [
+          Row(children: [
+            Icon(
+              Icons.favorite,
+              color: Colors.black,
+              size: 40,
+            ),
+            Text('Year,Make,Model,VIN')
+          ]),
+          Icon(
+            Icons.favorite,
+            color: Colors.black,
+            size: 40,
+          ),
+        ]),
+        Column(children: [
+          Text('Year:1975'),
+          Text('Make:Posche'),
+          Text('Model:911 Carrera'),
+          Text('VIN:9115400029')
+        ]),
+        Row(children: [
+          Icon(
+            Icons.favorite,
+            color: Colors.black,
+            size: 40,
+          ),
+          Text(),
+          Icon(
+            Icons.favorite,
+            color: Colors.black,
+            size: 40,
+          ),
+        ]),
+        Row(children: [
+          Icon(
+            Icons.favorite,
+            color: Colors.black,
+            size: 40,
+          ),
+          Text(),
+          Icon(
+            Icons.favorite,
+            color: Colors.black,
+            size: 40,
+          ),
+        ])
+      ])
     ]));
   }
 }
