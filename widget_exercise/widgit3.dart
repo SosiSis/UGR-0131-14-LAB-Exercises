@@ -5,10 +5,10 @@ class LABC extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return column(children: [
+    return Column(children: [
       Row(
           child: Row(children: [
-        column(children: [
+        Column(children: [
           Icon(
             Icons.favorite,
             color: Colors.black,
@@ -19,7 +19,7 @@ class LABC extends StatelessWidget {
                 color: Colors.black,
               ))
         ]),
-        column(
+        Column(
             Icon(
               Icons.favorite,
               color: Colors.black,
@@ -30,7 +30,7 @@ class LABC extends StatelessWidget {
                   color: Colors.black,
                 )))
       ])),
-      Row(child: Row(child: column(children: [Text(), slider()]))),
+      Row(child: Row(child: column(children: [Text(), Slider()]))),
       Container()
     ]);
   }
