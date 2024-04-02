@@ -14,7 +14,7 @@ class LABC extends StatelessWidget {
             color: Colors.black,
             size: 40,
           ),
-          Text('0',
+          Text('Male',
               style: TextStyle(
                 color: Colors.black,
               ))
@@ -25,13 +25,13 @@ class LABC extends StatelessWidget {
               color: Colors.black,
               size: 40,
             ),
-            Text('0',
+            Text('Female',
                 style: TextStyle(
                   color: Colors.black,
                 )))
-      ])),
-      Row(child: Row(child: column(children: [Text(), Slider()]))),
-      Container()
+      ])),Container(column(children:[Text('176.cm'), Slider()])),
+      Row(child: Row(children:[Column(),Column()] ))),
+      
     ]);
   }
 }
