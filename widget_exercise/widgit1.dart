@@ -93,7 +93,10 @@ class LABA extends StatelessWidget {
               color: Colors.black,
               size: 40,
             ),
-            Text('Year,Make,Model,VIN')
+            Text('Year,Make,Model,VIN',
+                style: TextStyle(
+                  color: Colors.black,
+                ))
           ]),
           Icon(
             Icons.favorite,
@@ -102,10 +105,22 @@ class LABA extends StatelessWidget {
           ),
         ]),
         Column(children: [
-          Text('Year:1975'),
-          Text('Make:Posche'),
-          Text('Model:911 Carrera'),
-          Text('VIN:9115400029')
+          Text('Year:1975',
+              style: TextStyle(
+                color: Colors.black,
+              )),
+          Text('Make:Posche',
+              style: TextStyle(
+                color: Colors.black,
+              )),
+          Text('Model:911 Carrera',
+              style: TextStyle(
+                color: Colors.black,
+              )),
+          Text('VIN:9115400029',
+              style: TextStyle(
+                color: Colors.black,
+              ))
         ]),
         Row(children: [
           Icon(
@@ -113,7 +128,7 @@ class LABA extends StatelessWidget {
             color: Colors.black,
             size: 40,
           ),
-          Text(),
+          Text('Description'),
           Icon(
             Icons.favorite,
             color: Colors.black,
@@ -126,7 +141,7 @@ class LABA extends StatelessWidget {
             color: Colors.black,
             size: 40,
           ),
-          Text(),
+          Text('Photo'),
           Icon(
             Icons.favorite,
             color: Colors.black,

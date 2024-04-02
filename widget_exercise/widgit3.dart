@@ -6,20 +6,20 @@ class LABC extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
-      Row(
-          child: Row(children: [
-        Column(children: [
-          Icon(
-            Icons.favorite,
-            color: Colors.black,
-            size: 40,
-          ),
-          Text('Male',
-              style: TextStyle(
-                color: Colors.black,
-              ))
-        ]),
-        Column(
+      Row(children: [
+        Row(children: [
+          Column(children: [
+            Icon(
+              Icons.favorite,
+              color: Colors.black,
+              size: 40,
+            ),
+            Text('Male',
+                style: TextStyle(
+                  color: Colors.black,
+                ))
+          ]),
+          Column(children: [
             Icon(
               Icons.favorite,
               color: Colors.black,
@@ -28,10 +28,17 @@ class LABC extends StatelessWidget {
             Text('Female',
                 style: TextStyle(
                   color: Colors.black,
-                )))
-      ])),Container(column(children:[Text('176.cm'), Slider()])),
-      Row(child: Row(children:[Column(),Column()] ))])
-      
-  
+                ))
+          ])
+        ])
+      ]),
+      Container(
+          child: Column(children: [
+        Text('176.cm'),
+      ])),
+      Row(children: [
+        Row(children: [Column(), Column()])
+      ])
+    ]);
   }
 }
