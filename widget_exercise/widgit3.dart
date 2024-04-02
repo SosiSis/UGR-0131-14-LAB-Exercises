@@ -5,6 +5,33 @@ class LABC extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return column();
+    return column(children: [
+      Row(
+          child: Row(children: [
+        column(children: [
+          Icon(
+            Icons.favorite,
+            color: Colors.black,
+            size: 40,
+          ),
+          Text('0',
+              style: TextStyle(
+                color: Colors.black,
+              ))
+        ]),
+        column(
+            Icon(
+              Icons.favorite,
+              color: Colors.black,
+              size: 40,
+            ),
+            Text('0',
+                style: TextStyle(
+                  color: Colors.black,
+                )))
+      ])),
+      Row(),
+      Container()
+    ]);
   }
 }
