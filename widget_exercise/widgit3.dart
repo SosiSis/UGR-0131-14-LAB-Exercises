@@ -30,8 +30,8 @@ class LABC extends StatelessWidget {
                   color: Colors.black,
                 )))
       ])),Container(column(children:[Text('176.cm'), Slider()])),
-      Row(child: Row(children:[Column(),Column()] ))),
+      Row(child: Row(children:[Column(),Column()] ))])
       
-    ]);
+  
   }
 }
