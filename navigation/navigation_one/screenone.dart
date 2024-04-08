@@ -19,3 +19,26 @@ class ScreenOne extends StatelessWidget {
     );
   }
 }
+
+
+//  return MaterialApp(
+//       title: 'Flutter Demo',
+//       initialRoute: '/',
+//       routes: {
+//         '/': (context) => const ScreenOne(),
+//         '/second': (context) => const ScreenTwo()
+//       },
+//     );
+
+
+
+//  title: 'Navigation Demo',
+//       onGenerateRoute: (RouteSettings settings) {
+//         switch (settings.name) {
+//           case '/':
+//             return MaterialPageRoute(builder: (context) => const ScreenOne());
+//           case '/four':
+//             return MaterialPageRoute(builder: (context) => const ScreenTwo());
+//         }
+//         throw Exception('Invalid route: ${settings.name}');
+//       },
