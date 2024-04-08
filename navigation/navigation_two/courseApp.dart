@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lab1/main.dart';
 
 class Course {
   String code;
