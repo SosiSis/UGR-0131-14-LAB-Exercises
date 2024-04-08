@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:lab1/navigation/navigation_two/courselApp.dart';
+import 'package:lab1/navigation/courseapp.dart';
 
 void main() {
   runApp(
-    MaterialApp(home: courseApp()),
+    MaterialApp(home: CourseApp()),
   );
 }
 

@@ -8,14 +8,14 @@ class Course {
   Course({required this.code, required this.title, this.description = ""});
 }
 
-class courseApp extends StatefulWidget {
-  const courseApp({super.key});
+class CourseApp extends StatefulWidget {
+  const CourseApp({super.key});
 
   @override
-  State<courseApp> createState() => _courseAppState();
+  State<CourseApp> createState() => _CourseAppState();
 }
 
-class _courseAppState extends State<courseApp> {
+class _CourseAppState extends State<CourseApp> {
   void _tabHandler(Course course) {
     setState(() {
       _selectedCourse = course;
