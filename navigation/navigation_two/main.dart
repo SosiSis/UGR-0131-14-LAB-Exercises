@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quotes/courseApp.dart';
+import 'package:lab1/courseApp.dart';
 
 void main() {
   runApp(
