@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lab1/courseApp.dart';
+import 'package:lab1/navigation/navigation_two/courselApp.dart';
 
 void main() {
   runApp(
