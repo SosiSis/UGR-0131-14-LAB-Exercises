@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:quotes/navigator2.dart';
 
 class Course {
   String code;
