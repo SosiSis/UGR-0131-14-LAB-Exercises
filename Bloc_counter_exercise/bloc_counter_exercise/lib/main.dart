@@ -5,47 +5,41 @@ void main() {
   runApp(MyApp());
 }
 
-// Event
-abstract class CounterEvent {}
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Counter App',
+      home: BlocProvider(
+        create: (_) => CounterBloc(),
+        child: CounterPage(),
+      ),
+    );
+  }
+}
 
-class IncrementEvent extends CounterEvent {}
+// Define the events
+enum CounterEvent { increment, decrement }
 
-class DecrementEvent extends CounterEvent {}
-
-// State
+// Define the state
 class CounterState {
   final int count;
 
   CounterState(this.count);
 }
 
-// Bloc
+// Define the BLoC
 class CounterBloc extends Bloc<CounterEvent, CounterState> {
   CounterBloc() : super(CounterState(0));
 
   @override
+  // ignore: override_on_non_overriding_member
   Stream<CounterState> mapEventToState(CounterEvent event) async* {
-    if (event is IncrementEvent) {
+    if (event == CounterEvent.increment) {
       yield CounterState(state.count + 1);
-    } else if (event is DecrementEvent) {
+    } else if (event == CounterEvent.decrement) {
       yield CounterState(state.count - 1);
     }
-  }
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Counter App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: BlocProvider(
-        create: (_) => CounterBloc(),
-        child: CounterPage(),
-      ),
-    );
   }
 }
 
@@ -55,35 +49,33 @@ class CounterPage extends StatelessWidget {
     final CounterBloc counterBloc = BlocProvider.of<CounterBloc>(context);
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Counter App'),
-      ),
+      appBar: AppBar(title: Text('Counter App')),
       body: BlocBuilder<CounterBloc, CounterState>(
         builder: (context, state) {
           return Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
+              children: [
                 Text(
-                  '${state.count}',
-                  style: TextStyle(fontSize: 48.0),
+                  'Count: ${state.count}',
+                  style: TextStyle(fontSize: 24),
                 ),
-                SizedBox(height: 20.0),
+                SizedBox(height: 16),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    TextButton(
+                  children: [
+                    ElevatedButton(
                       onPressed: () {
-                        counterBloc.add(DecrementEvent());
-                      },
-                      child: Text('Decrement'),
-                    ),
-                    SizedBox(width: 20.0),
-                    TextButton(
-                      onPressed: () {
-                        counterBloc.add(IncrementEvent());
+                        counterBloc.add(CounterEvent.increment);
                       },
                       child: Text('Increment'),
+                    ),
+                    SizedBox(width: 16),
+                    ElevatedButton(
+                      onPressed: () {
+                        counterBloc.add(CounterEvent.decrement);
+                      },
+                      child: Text('Decrement'),
                     ),
                   ],
                 ),
