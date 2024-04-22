@@ -33,8 +33,8 @@ class MyApp extends StatelessWidget {
 
 class CounterPage extends ConsumerWidget {
   @override
-  Widget build(BuildContext context, ScopedReader watch) {
-    final count = watch(counterProvider);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final count = ref.watch(counterProvider);
 
     return Scaffold(
       appBar: AppBar(title: Text('Counter App')),
@@ -49,14 +49,14 @@ class CounterPage extends ConsumerWidget {
             SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {
-                context.read(counterProvider.notifier).increment();
+                ref.read(counterProvider.notifier).increment();
               },
               child: Text('Increment'),
             ),
             SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {
-                context.read(counterProvider.notifier).decrement();
+                ref.read(counterProvider.notifier).decrement();
               },
               child: Text('Decrement'),
             ),
